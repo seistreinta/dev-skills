@@ -219,6 +219,7 @@ General workflow tools, not code-specific.
 
 **User-invoked**
 
+- **[ai-usage-report](./skills/productivity/ai-usage-report/SKILL.md)**: Measure what share of your commits were written with Claude Code, reading local transcripts and git history. Everything stays on the machine, and no prompt or response text is read.
 - **[grill-me](./skills/productivity/grill-me/SKILL.md)**: Get relentlessly interviewed about a plan or design until every branch of the design tree is resolved.
 - **[handoff](./skills/productivity/handoff/SKILL.md)**: Compact the current conversation into a handoff document so another agent can continue the work.
 - **[teach](./skills/productivity/teach/SKILL.md)**: Teach the user a new skill or concept over multiple sessions, using the current directory as a stateful teaching workspace.
