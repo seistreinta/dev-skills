@@ -346,7 +346,8 @@ async function main() {
 
   // Default to a timestamped folder under the OS temp directory so reports do
   // not accumulate in a working tree. The path is printed so the caller can
-  // open the files before the OS reclaims them.
+  // open the files before the OS reclaims them. Each file gets its own
+  // absolute path on its own line, so a caller can copy one straight out.
   const slug = author.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
   const stamp = new Date().toISOString().slice(0, 19).split(':').join('');
   const outDir = path.resolve(
@@ -387,9 +388,8 @@ async function main() {
     ) + '\n'
   );
 
-  console.log(`\n  Reports written to:\n    ${outDir}`);
-  console.log(`      report.csv`);
-  console.log(`      report.json`);
+  console.log('\n  Reports written to:');
+  for (const p of [csvPath, jsonPath]) console.log(`    ${p}`);
 }
 
 main().catch((e) => {

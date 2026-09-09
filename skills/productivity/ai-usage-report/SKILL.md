@@ -30,7 +30,7 @@ Paths are relative to this skill's directory. Requires Node 18 or later, already
 
 Add `--since YYYY-MM-DD` to set the window, or `--author <email>` when the user's git email differs from `git config --global user.email`.
 
-Done when the script prints a summary table and an output path.
+Done when the script prints a summary table and one absolute path per generated file.
 
 ### 3. Report back
 
@@ -38,7 +38,7 @@ Give the user, in this order:
 
 1. The headline percentages: commits with AI, files with AI.
 2. The per-repository breakdown.
-3. The absolute path the script printed, and the two filenames (`report.csv`, `report.json`).
+3. Every line under the script's `Reports written to:` heading, copied verbatim as a bullet each: one full absolute path per generated file, so the user can copy one straight into an editor.
 4. Which directory you passed to `--scan`, so they can re-run against a different one.
 
 The reports live under the OS temp directory, which the OS reclaims on its own schedule. Tell the user to copy the files out if they want to keep them.
