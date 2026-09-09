@@ -1,0 +1,5 @@
+interface:
+  display_name: "AI Usage Report"
+  short_description: "Measure your AI-assisted commit share"
+policy:
+  allow_implicit_invocation: false
