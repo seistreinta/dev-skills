@@ -1,0 +1,7 @@
+# Every text file in this repo is checked out with LF endings, on every
+# platform. Without this, a Windows clone with core.autocrlf=true gets CRLF,
+# and bash then reads line 2 of scripts/*.sh as `set -euo pipefail\r`:
+#   : invalid option nameh: line 2: set: pipefail
+# This repo tracks only text (md, yaml, sh, json, mjs/cjs), so `text=auto`
+# still lets Git detect and leave alone any binary added later.
+* text=auto eol=lf
