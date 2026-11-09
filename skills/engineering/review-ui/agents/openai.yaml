@@ -1,0 +1,5 @@
+interface:
+  display_name: "Review UI"
+  short_description: "Preview UI checklist, then apply approved fixes"
+policy:
+  allow_implicit_invocation: false
